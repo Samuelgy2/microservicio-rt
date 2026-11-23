@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ApiApplication" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.microserviviort.api.ApiApplication" />
+    <module name="api" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

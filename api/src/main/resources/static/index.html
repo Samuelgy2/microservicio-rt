@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Transacciones</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<h1>Transacciones</h1>
+<table id="transactionsTable">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tipo</th>
+            <th>Monto</th>
+            <th>Fecha</th>
+            <th>Descripción</th>
+            <th>Método Pago</th>
+            <th>Categoría</th>
+            <th>Referencia</th>
+            <th>Creado Por</th>
+            <th>Socio</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+<div class="pager">
+    <button id="prevBtn" disabled>Anterior</button>
+    <span>Página <span id="pageNum">0</span></span>
+    <button id="nextBtn" disabled>Siguiente</button>
+</div>
+<div class="message" id="msg"></div>
+<div class="error" id="err"></div>
+
+<script src="/script.js"></script>
+</body>
+</html>

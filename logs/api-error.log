@@ -1,0 +1,16 @@
+2026-11-23 16:14:16.631 [main] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-11-23 16:14:16.661 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-11-23 16:17:20.939 [http-nio-8000-exec-2] WARN  c.m.api.exception.GlobalExceptionHandler - 404 Ruta no encontrada: GET /favicon.ico

@@ -1,0 +1,1145 @@
+2026-11-23 16:50:17.947 [main] INFO  com.microserviviort.api.ApiApplication - Starting ApiApplication v0.0.1-SNAPSHOT using Java 21.0.12.1 with PID 18016 (C:\Users\ne\Downloads\api\api\target\api-0.0.1-SNAPSHOT.jar started by ne in C:\Users\ne\Downloads\api\api)
+2026-11-23 16:50:17.951 [main] DEBUG com.microserviviort.api.ApiApplication - Running with Spring Boot v4.2.0, Spring v7.1.0
+2026-11-23 16:50:17.953 [main] INFO  com.microserviviort.api.ApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-23 16:50:20.099 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
+2026-11-23 16:50:20.127 [main] INFO  o.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
+2026-11-23 16:50:20.134 [main] INFO  o.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-11-23 16:50:20.135 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-11-23 16:50:20.236 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2181 ms
+2026-11-23 16:50:20.501 [main] INFO  c.m.api.repository.TransaccionRepository - TransaccionRepository inicializado sobre la tabla 'transactions'
+2026-11-23 16:50:20.691 [main] INFO  o.s.b.w.a.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-11-23 16:50:20.698 [main] INFO  c.microserviviort.api.config.CorsConfig - Configurando CORS para /api/** con origenes: *
+2026-11-23 16:50:21.281 [main] INFO  o.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
+2026-11-23 16:50:21.336 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8000 (http) with context path '/'
+2026-11-23 16:50:21.394 [main] INFO  com.microserviviort.api.ApiApplication - Started ApiApplication in 4.502 seconds (process running for 5.422)
+2026-11-23 16:50:34.762 [http-nio-8000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-23 16:50:34.763 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-11-23 16:50:34.767 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2026-11-23 16:50:34.852 [http-nio-8000-exec-1] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=0 size=10
+2026-11-23 16:50:34.866 [http-nio-8000-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-11-23 16:50:35.270 [http-nio-8000-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7f6ad4cc
+2026-11-23 16:50:35.273 [http-nio-8000-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-11-23 16:50:35.292 [http-nio-8000-exec-1] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) FROM transactions]
+2026-11-23 16:50:35.340 [http-nio-8000-exec-1] DEBUG c.m.api.repository.TransaccionRepository - Ejecutando consulta paginada: page=0, size=10, offset=0
+2026-11-23 16:50:35.342 [http-nio-8000-exec-1] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 16:50:35.344 [http-nio-8000-exec-1] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions ORDER BY fecha DESC, id DESC LIMIT ? OFFSET ?]
+2026-11-23 16:50:35.375 [http-nio-8000-exec-1] INFO  c.m.api.service.TransaccionService - Consulta de transacciones: page=0, size=10, devueltas=10, total=21
+2026-11-23 16:50:35.793 [http-nio-8000-exec-3] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=-1 size=10
+2026-11-23 16:50:35.801 [http-nio-8000-exec-3] ERROR c.m.api.controller.TransaccionController - Fallo en GET /api/transacciones page=-1 size=10: El parametro 'page' debe ser mayor o igual a 0
+2026-11-23 16:50:35.807 [http-nio-8000-exec-3] WARN  c.m.api.exception.GlobalExceptionHandler - 400 Bad Request en GET /api/transacciones: El parametro 'page' debe ser mayor o igual a 0
+2026-11-23 16:50:41.919 [http-nio-8000-exec-5] WARN  c.m.api.exception.GlobalExceptionHandler - 404 Ruta no encontrada: GET /style.css
+2026-11-23 16:50:41.919 [http-nio-8000-exec-6] WARN  c.m.api.exception.GlobalExceptionHandler - 404 Ruta no encontrada: GET /script.js
+2026-11-23 16:50:41.965 [http-nio-8000-exec-7] WARN  c.m.api.exception.GlobalExceptionHandler - 404 Ruta no encontrada: GET /favicon.ico
+2026-11-23 16:51:34.646 [main] INFO  com.microserviviort.api.ApiApplication - Starting ApiApplication v0.0.1-SNAPSHOT using Java 21.0.12.1 with PID 23880 (C:\Users\ne\Downloads\api\api\target\api-0.0.1-SNAPSHOT.jar started by ne in C:\Users\ne\Downloads\api\api)
+2026-11-23 16:51:34.654 [main] DEBUG com.microserviviort.api.ApiApplication - Running with Spring Boot v4.2.0, Spring v7.1.0
+2026-11-23 16:51:34.655 [main] INFO  com.microserviviort.api.ApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-23 16:51:36.656 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
+2026-11-23 16:51:36.685 [main] INFO  o.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
+2026-11-23 16:51:36.688 [main] INFO  o.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-11-23 16:51:36.688 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-11-23 16:51:36.786 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2028 ms
+2026-11-23 16:51:37.019 [main] INFO  c.m.api.repository.TransaccionRepository - TransaccionRepository inicializado sobre la tabla 'transactions'
+2026-11-23 16:51:37.185 [main] INFO  o.s.b.w.a.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-11-23 16:51:37.192 [main] INFO  c.microserviviort.api.config.CorsConfig - Configurando CORS para /api/** con origenes: *
+2026-11-23 16:51:37.655 [main] INFO  o.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
+2026-11-23 16:51:37.711 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8000 (http) with context path '/'
+2026-11-23 16:51:37.770 [main] INFO  com.microserviviort.api.ApiApplication - Started ApiApplication in 4.222 seconds (process running for 5.15)
+2026-11-23 16:51:38.258 [http-nio-8000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-23 16:51:38.258 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-11-23 16:51:38.261 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-11-23 16:51:41.895 [http-nio-8000-exec-3] WARN  c.m.api.exception.GlobalExceptionHandler - 404 Ruta no encontrada: GET /favicon.ico
+2026-11-23 16:51:41.913 [http-nio-8000-exec-2] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=0 size=10
+2026-11-23 16:51:41.923 [http-nio-8000-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-11-23 16:51:42.283 [http-nio-8000-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e375e0d
+2026-11-23 16:51:42.291 [http-nio-8000-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-11-23 16:51:42.306 [http-nio-8000-exec-2] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) FROM transactions]
+2026-11-23 16:51:42.363 [http-nio-8000-exec-2] DEBUG c.m.api.repository.TransaccionRepository - Ejecutando consulta paginada: page=0, size=10, offset=0
+2026-11-23 16:51:42.363 [http-nio-8000-exec-2] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 16:51:42.369 [http-nio-8000-exec-2] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions ORDER BY fecha DESC, id DESC LIMIT ? OFFSET ?]
+2026-11-23 16:51:42.396 [http-nio-8000-exec-2] INFO  c.m.api.service.TransaccionService - Consulta de transacciones: page=0, size=10, devueltas=10, total=21
+2026-11-23 16:51:49.162 [http-nio-8000-exec-10] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=1 size=10
+2026-11-23 16:51:49.162 [http-nio-8000-exec-10] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) FROM transactions]
+2026-11-23 16:51:49.162 [http-nio-8000-exec-10] DEBUG c.m.api.repository.TransaccionRepository - Ejecutando consulta paginada: page=1, size=10, offset=10
+2026-11-23 16:51:49.162 [http-nio-8000-exec-10] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 16:51:49.162 [http-nio-8000-exec-10] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions ORDER BY fecha DESC, id DESC LIMIT ? OFFSET ?]
+2026-11-23 16:51:49.171 [http-nio-8000-exec-10] INFO  c.m.api.service.TransaccionService - Consulta de transacciones: page=1, size=10, devueltas=10, total=21
+2026-11-23 16:51:55.353 [http-nio-8000-exec-7] INFO  c.m.api.controller.TransaccionController - DELETE /api/transacciones/999999
+2026-11-23 16:51:55.354 [http-nio-8000-exec-7] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+2026-11-23 16:51:55.354 [http-nio-8000-exec-7] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [DELETE FROM transactions WHERE id = ?]
+2026-11-23 16:51:55.362 [http-nio-8000-exec-7] DEBUG c.m.api.repository.TransaccionRepository - DELETE id=999999 -> filas afectadas=0
+2026-11-23 16:51:55.362 [http-nio-8000-exec-7] WARN  c.m.api.service.TransaccionService - Intento de eliminar transaccion inexistente id=999999
+2026-11-23 16:51:55.370 [http-nio-8000-exec-7] ERROR c.m.api.controller.TransaccionController - Fallo en DELETE /api/transacciones/999999: No existe la transaccion con id 999999
+2026-11-23 16:51:55.372 [http-nio-8000-exec-7] WARN  c.m.api.exception.GlobalExceptionHandler - 404 Not Found en DELETE /api/transacciones/999999: No existe la transaccion con id 999999
+2026-11-23 16:53:25.264 [http-nio-8000-exec-10] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=0 size=10
+2026-11-23 16:53:25.267 [http-nio-8000-exec-10] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) FROM transactions]
+2026-11-23 16:53:25.269 [http-nio-8000-exec-10] DEBUG c.m.api.repository.TransaccionRepository - Ejecutando consulta paginada: page=0, size=10, offset=0
+2026-11-23 16:53:25.269 [http-nio-8000-exec-10] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 16:53:25.269 [http-nio-8000-exec-10] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions ORDER BY fecha DESC, id DESC LIMIT ? OFFSET ?]
+2026-11-23 16:53:25.274 [http-nio-8000-exec-10] INFO  c.m.api.service.TransaccionService - Consulta de transacciones: page=0, size=10, devueltas=10, total=21
+2026-11-23 16:53:27.833 [http-nio-8000-exec-8] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=0 size=10
+2026-11-23 16:53:27.836 [http-nio-8000-exec-8] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) FROM transactions]
+2026-11-23 16:53:27.838 [http-nio-8000-exec-8] DEBUG c.m.api.repository.TransaccionRepository - Ejecutando consulta paginada: page=0, size=10, offset=0
+2026-11-23 16:53:27.838 [http-nio-8000-exec-8] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 16:53:27.840 [http-nio-8000-exec-8] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions ORDER BY fecha DESC, id DESC LIMIT ? OFFSET ?]
+2026-11-23 16:53:27.844 [http-nio-8000-exec-8] INFO  c.m.api.service.TransaccionService - Consulta de transacciones: page=0, size=10, devueltas=10, total=21
+2026-11-23 16:53:28.463 [http-nio-8000-exec-6] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=0 size=10
+2026-11-23 16:53:28.467 [http-nio-8000-exec-6] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) FROM transactions]
+2026-11-23 16:53:28.469 [http-nio-8000-exec-6] DEBUG c.m.api.repository.TransaccionRepository - Ejecutando consulta paginada: page=0, size=10, offset=0
+2026-11-23 16:53:28.469 [http-nio-8000-exec-6] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 16:53:28.469 [http-nio-8000-exec-6] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions ORDER BY fecha DESC, id DESC LIMIT ? OFFSET ?]
+2026-11-23 16:53:28.476 [http-nio-8000-exec-6] INFO  c.m.api.service.TransaccionService - Consulta de transacciones: page=0, size=10, devueltas=10, total=21
+2026-11-23 16:53:28.656 [http-nio-8000-exec-5] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=0 size=10
+2026-11-23 16:53:28.658 [http-nio-8000-exec-5] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) FROM transactions]
+2026-11-23 16:53:28.661 [http-nio-8000-exec-5] DEBUG c.m.api.repository.TransaccionRepository - Ejecutando consulta paginada: page=0, size=10, offset=0
+2026-11-23 16:53:28.661 [http-nio-8000-exec-5] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 16:53:28.663 [http-nio-8000-exec-5] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions ORDER BY fecha DESC, id DESC LIMIT ? OFFSET ?]
+2026-11-23 16:53:28.669 [http-nio-8000-exec-5] INFO  c.m.api.service.TransaccionService - Consulta de transacciones: page=0, size=10, devueltas=10, total=21
+2026-11-23 16:53:28.849 [http-nio-8000-exec-3] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=0 size=10
+2026-11-23 16:53:28.851 [http-nio-8000-exec-3] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) FROM transactions]
+2026-11-23 16:53:28.854 [http-nio-8000-exec-3] DEBUG c.m.api.repository.TransaccionRepository - Ejecutando consulta paginada: page=0, size=10, offset=0
+2026-11-23 16:53:28.854 [http-nio-8000-exec-3] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 16:53:28.854 [http-nio-8000-exec-3] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions ORDER BY fecha DESC, id DESC LIMIT ? OFFSET ?]
+2026-11-23 16:53:28.861 [http-nio-8000-exec-3] INFO  c.m.api.service.TransaccionService - Consulta de transacciones: page=0, size=10, devueltas=10, total=21
+2026-11-23 17:01:40.020 [main] INFO  com.microserviviort.api.ApiApplication - Starting ApiApplication v0.0.1-SNAPSHOT using Java 21.0.12.1 with PID 24112 (C:\Users\ne\Downloads\api\api\target\api-0.0.1-SNAPSHOT.jar started by ne in C:\Users\ne\Downloads\api\api)
+2026-11-23 17:01:40.028 [main] DEBUG com.microserviviort.api.ApiApplication - Running with Spring Boot v4.2.0, Spring v7.1.0
+2026-11-23 17:01:40.030 [main] INFO  com.microserviviort.api.ApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-23 17:01:42.061 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
+2026-11-23 17:01:42.085 [main] INFO  o.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
+2026-11-23 17:01:42.088 [main] INFO  o.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-11-23 17:01:42.088 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-11-23 17:01:42.167 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2043 ms
+2026-11-23 17:01:42.416 [main] INFO  c.m.api.repository.TransaccionRepository - TransaccionRepository inicializado sobre la tabla 'transactions'
+2026-11-23 17:01:42.620 [main] INFO  o.s.b.w.a.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-11-23 17:01:42.626 [main] INFO  c.microserviviort.api.config.CorsConfig - Configurando CORS para /api/** con origenes: *
+2026-11-23 17:01:43.121 [main] INFO  o.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
+2026-11-23 17:01:43.173 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8000 (http) with context path '/'
+2026-11-23 17:01:43.233 [main] INFO  com.microserviviort.api.ApiApplication - Started ApiApplication in 4.35 seconds (process running for 5.273)
+2026-11-23 17:02:11.204 [http-nio-8000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-23 17:02:11.204 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-11-23 17:02:11.206 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-11-23 17:02:11.273 [http-nio-8000-exec-1] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=0 size=3
+2026-11-23 17:02:11.285 [http-nio-8000-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-11-23 17:02:12.468 [http-nio-8000-exec-1] ERROR c.m.api.controller.TransaccionController - Fallo en GET /api/transacciones page=0 size=3: Could not open JDBC Connection for transaction
+2026-11-23 17:02:12.472 [http-nio-8000-exec-1] ERROR c.m.api.exception.GlobalExceptionHandler - 500 Error inesperado en GET /api/transacciones: Could not open JDBC Connection for transaction
+org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:319)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:532)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:405)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:628)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:365)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:738)
+	at com.microserviviort.api.service.TransaccionService$$SpringCGLIB$$0.consultar(<generated>)
+	at com.microserviviort.api.controller.TransaccionController.consultar(TransaccionController.java:43)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:938)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:857)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1001)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:872)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:411)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2202)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:947)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:481)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:270)
+	... 52 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	... 63 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 66 common frames omitted
+2026-11-23 17:02:12.673 [http-nio-8000-exec-2] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=2 size=10
+2026-11-23 17:02:12.674 [http-nio-8000-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-11-23 17:02:13.683 [http-nio-8000-exec-2] ERROR c.m.api.controller.TransaccionController - Fallo en GET /api/transacciones page=2 size=10: Could not open JDBC Connection for transaction
+2026-11-23 17:02:13.684 [http-nio-8000-exec-2] ERROR c.m.api.exception.GlobalExceptionHandler - 500 Error inesperado en GET /api/transacciones: Could not open JDBC Connection for transaction
+org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:319)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:532)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:405)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:628)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:365)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:738)
+	at com.microserviviort.api.service.TransaccionService$$SpringCGLIB$$0.consultar(<generated>)
+	at com.microserviviort.api.controller.TransaccionController.consultar(TransaccionController.java:43)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:938)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:857)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1001)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:872)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:411)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2202)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:947)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:481)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:270)
+	... 52 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	... 63 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 66 common frames omitted
+2026-11-23 17:02:13.698 [http-nio-8000-exec-3] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=-1 size=10
+2026-11-23 17:02:13.699 [http-nio-8000-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-11-23 17:02:14.712 [http-nio-8000-exec-3] ERROR c.m.api.controller.TransaccionController - Fallo en GET /api/transacciones page=-1 size=10: Could not open JDBC Connection for transaction
+2026-11-23 17:02:14.713 [http-nio-8000-exec-3] ERROR c.m.api.exception.GlobalExceptionHandler - 500 Error inesperado en GET /api/transacciones: Could not open JDBC Connection for transaction
+org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:319)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:532)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:405)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:628)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:365)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:738)
+	at com.microserviviort.api.service.TransaccionService$$SpringCGLIB$$0.consultar(<generated>)
+	at com.microserviviort.api.controller.TransaccionController.consultar(TransaccionController.java:43)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:938)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:857)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1001)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:872)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:411)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2202)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:947)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:481)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:270)
+	... 52 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	... 63 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 66 common frames omitted
+2026-11-23 17:02:14.725 [http-nio-8000-exec-4] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=0 size=500
+2026-11-23 17:02:14.725 [http-nio-8000-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-11-23 17:02:15.737 [http-nio-8000-exec-4] ERROR c.m.api.controller.TransaccionController - Fallo en GET /api/transacciones page=0 size=500: Could not open JDBC Connection for transaction
+2026-11-23 17:02:15.738 [http-nio-8000-exec-4] ERROR c.m.api.exception.GlobalExceptionHandler - 500 Error inesperado en GET /api/transacciones: Could not open JDBC Connection for transaction
+org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:319)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:532)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:405)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:628)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:365)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:738)
+	at com.microserviviort.api.service.TransaccionService$$SpringCGLIB$$0.consultar(<generated>)
+	at com.microserviviort.api.controller.TransaccionController.consultar(TransaccionController.java:43)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:938)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:857)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1001)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:872)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:411)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2202)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:947)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:481)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:270)
+	... 52 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	... 63 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 66 common frames omitted
+2026-11-23 17:02:15.755 [http-nio-8000-exec-5] WARN  c.m.api.exception.GlobalExceptionHandler - 400 Bad Request en GET /api/transacciones/abc: El parametro 'id' tiene un valor invalido: abc
+2026-11-23 17:02:15.763 [http-nio-8000-exec-6] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones/999999
+2026-11-23 17:02:15.764 [http-nio-8000-exec-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-11-23 17:02:16.781 [http-nio-8000-exec-6] ERROR c.m.api.controller.TransaccionController - Fallo en GET /api/transacciones/999999: Could not open JDBC Connection for transaction
+2026-11-23 17:02:16.782 [http-nio-8000-exec-6] ERROR c.m.api.exception.GlobalExceptionHandler - 500 Error inesperado en GET /api/transacciones/999999: Could not open JDBC Connection for transaction
+org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:319)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:532)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:405)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:628)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:365)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:738)
+	at com.microserviviort.api.service.TransaccionService$$SpringCGLIB$$0.consultarPorId(<generated>)
+	at com.microserviviort.api.controller.TransaccionController.consultarPorId(TransaccionController.java:57)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:938)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:857)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1001)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:872)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:411)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2202)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:947)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:481)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:270)
+	... 52 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	... 63 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 66 common frames omitted
+2026-11-23 17:02:16.793 [http-nio-8000-exec-7] INFO  c.m.api.controller.TransaccionController - DELETE /api/transacciones/999999
+2026-11-23 17:02:16.793 [http-nio-8000-exec-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-11-23 17:02:17.809 [http-nio-8000-exec-7] ERROR c.m.api.controller.TransaccionController - Fallo en DELETE /api/transacciones/999999: Could not open JDBC Connection for transaction
+2026-11-23 17:02:17.810 [http-nio-8000-exec-7] ERROR c.m.api.exception.GlobalExceptionHandler - 500 Error inesperado en DELETE /api/transacciones/999999: Could not open JDBC Connection for transaction
+org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:319)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:532)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:405)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:628)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:365)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:738)
+	at com.microserviviort.api.service.TransaccionService$$SpringCGLIB$$0.eliminar(<generated>)
+	at com.microserviviort.api.controller.TransaccionController.eliminar(TransaccionController.java:71)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:938)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:857)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1001)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:935)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:651)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:872)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:411)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2202)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:947)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:481)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:270)
+	... 52 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	... 63 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 66 common frames omitted
+2026-11-23 17:05:01.395 [http-nio-8000-exec-10] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=0 size=3
+2026-11-23 17:05:01.395 [http-nio-8000-exec-10] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-11-23 17:05:01.621 [http-nio-8000-exec-10] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6631efd1
+2026-11-23 17:05:01.630 [http-nio-8000-exec-10] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-11-23 17:05:01.648 [http-nio-8000-exec-10] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) FROM transactions]
+2026-11-23 17:05:01.702 [http-nio-8000-exec-10] DEBUG c.m.api.repository.TransaccionRepository - Ejecutando consulta paginada: page=0, size=3, offset=0
+2026-11-23 17:05:01.702 [http-nio-8000-exec-10] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 17:05:01.702 [http-nio-8000-exec-10] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions ORDER BY fecha DESC, id DESC LIMIT ? OFFSET ?]
+2026-11-23 17:05:01.731 [http-nio-8000-exec-10] INFO  c.m.api.service.TransaccionService - Consulta de transacciones: page=0, size=3, devueltas=3, total=21
+2026-11-23 17:05:01.830 [http-nio-8000-exec-1] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=2 size=10
+2026-11-23 17:05:01.833 [http-nio-8000-exec-1] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) FROM transactions]
+2026-11-23 17:05:01.834 [http-nio-8000-exec-1] DEBUG c.m.api.repository.TransaccionRepository - Ejecutando consulta paginada: page=2, size=10, offset=20
+2026-11-23 17:05:01.834 [http-nio-8000-exec-1] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 17:05:01.834 [http-nio-8000-exec-1] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions ORDER BY fecha DESC, id DESC LIMIT ? OFFSET ?]
+2026-11-23 17:05:01.837 [http-nio-8000-exec-1] INFO  c.m.api.service.TransaccionService - Consulta de transacciones: page=2, size=10, devueltas=1, total=21
+2026-11-23 17:05:01.882 [http-nio-8000-exec-2] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=-1 size=10
+2026-11-23 17:05:01.888 [http-nio-8000-exec-2] ERROR c.m.api.controller.TransaccionController - Fallo en GET /api/transacciones page=-1 size=10: El parametro 'page' debe ser mayor o igual a 0
+2026-11-23 17:05:01.890 [http-nio-8000-exec-2] WARN  c.m.api.exception.GlobalExceptionHandler - 400 Bad Request en GET /api/transacciones: El parametro 'page' debe ser mayor o igual a 0
+2026-11-23 17:05:01.923 [http-nio-8000-exec-3] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=0 size=500
+2026-11-23 17:05:01.923 [http-nio-8000-exec-3] ERROR c.m.api.controller.TransaccionController - Fallo en GET /api/transacciones page=0 size=500: El parametro 'size' debe estar entre 1 y 100
+2026-11-23 17:05:01.923 [http-nio-8000-exec-3] WARN  c.m.api.exception.GlobalExceptionHandler - 400 Bad Request en GET /api/transacciones: El parametro 'size' debe estar entre 1 y 100
+2026-11-23 17:05:01.935 [http-nio-8000-exec-4] WARN  c.m.api.exception.GlobalExceptionHandler - 400 Bad Request en GET /api/transacciones/abc: El parametro 'id' tiene un valor invalido: abc
+2026-11-23 17:05:01.944 [http-nio-8000-exec-5] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones/0
+2026-11-23 17:05:01.947 [http-nio-8000-exec-5] ERROR c.m.api.controller.TransaccionController - Fallo en GET /api/transacciones/0: El id debe ser un entero positivo
+2026-11-23 17:05:01.947 [http-nio-8000-exec-5] WARN  c.m.api.exception.GlobalExceptionHandler - 400 Bad Request en GET /api/transacciones/0: El id debe ser un entero positivo
+2026-11-23 17:05:01.954 [http-nio-8000-exec-6] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones/999999
+2026-11-23 17:05:01.957 [http-nio-8000-exec-6] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 17:05:01.957 [http-nio-8000-exec-6] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions WHERE id = ?]
+2026-11-23 17:05:01.957 [http-nio-8000-exec-6] WARN  c.m.api.service.TransaccionService - Transaccion id=999999 no encontrada
+2026-11-23 17:05:01.963 [http-nio-8000-exec-6] ERROR c.m.api.controller.TransaccionController - Fallo en GET /api/transacciones/999999: No existe la transaccion con id 999999
+2026-11-23 17:05:01.963 [http-nio-8000-exec-6] WARN  c.m.api.exception.GlobalExceptionHandler - 404 Not Found en GET /api/transacciones/999999: No existe la transaccion con id 999999
+2026-11-23 17:05:01.972 [http-nio-8000-exec-7] INFO  c.m.api.controller.TransaccionController - DELETE /api/transacciones/999999
+2026-11-23 17:05:01.972 [http-nio-8000-exec-7] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+2026-11-23 17:05:01.972 [http-nio-8000-exec-7] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [DELETE FROM transactions WHERE id = ?]
+2026-11-23 17:05:01.972 [http-nio-8000-exec-7] DEBUG c.m.api.repository.TransaccionRepository - DELETE id=999999 -> filas afectadas=0
+2026-11-23 17:05:01.972 [http-nio-8000-exec-7] WARN  c.m.api.service.TransaccionService - Intento de eliminar transaccion inexistente id=999999
+2026-11-23 17:05:01.979 [http-nio-8000-exec-7] ERROR c.m.api.controller.TransaccionController - Fallo en DELETE /api/transacciones/999999: No existe la transaccion con id 999999
+2026-11-23 17:05:01.979 [http-nio-8000-exec-7] WARN  c.m.api.exception.GlobalExceptionHandler - 404 Not Found en DELETE /api/transacciones/999999: No existe la transaccion con id 999999
+2026-11-23 17:05:01.989 [http-nio-8000-exec-8] WARN  c.m.api.exception.GlobalExceptionHandler - 405 Metodo no permitido: PATCH /api/transacciones/1
+2026-11-23 17:05:02.001 [http-nio-8000-exec-9] WARN  c.m.api.exception.GlobalExceptionHandler - 404 Ruta no encontrada: GET /noexiste
+2026-11-23 17:06:01.425 [main] INFO  com.microserviviort.api.ApiApplication - Starting ApiApplication v0.0.1-SNAPSHOT using Java 21.0.12.1 with PID 3980 (C:\Users\ne\Downloads\api\api\target\api-0.0.1-SNAPSHOT.jar started by ne in C:\Users\ne\Downloads\api\api)
+2026-11-23 17:06:01.432 [main] DEBUG com.microserviviort.api.ApiApplication - Running with Spring Boot v4.2.0, Spring v7.1.0
+2026-11-23 17:06:01.434 [main] INFO  com.microserviviort.api.ApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-23 17:06:03.397 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
+2026-11-23 17:06:03.436 [main] INFO  o.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
+2026-11-23 17:06:03.440 [main] INFO  o.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-11-23 17:06:03.441 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-11-23 17:06:03.505 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1970 ms
+2026-11-23 17:06:03.747 [main] INFO  c.m.api.repository.TransaccionRepository - TransaccionRepository inicializado sobre la tabla 'transactions'
+2026-11-23 17:06:03.904 [main] INFO  o.s.b.w.a.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-11-23 17:06:03.910 [main] INFO  c.microserviviort.api.config.CorsConfig - Configurando CORS para /api/** con origenes: *
+2026-11-23 17:06:04.342 [main] INFO  o.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
+2026-11-23 17:06:04.386 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8000 (http) with context path '/'
+2026-11-23 17:06:04.469 [main] INFO  com.microserviviort.api.ApiApplication - Started ApiApplication in 4.151 seconds (process running for 5.068)
+2026-11-23 17:06:11.658 [http-nio-8000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-23 17:06:11.659 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-11-23 17:06:11.662 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-11-23 17:06:11.728 [http-nio-8000-exec-1] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=0 size=2
+2026-11-23 17:06:11.737 [http-nio-8000-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-11-23 17:06:12.066 [http-nio-8000-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1fbfddb7
+2026-11-23 17:06:12.068 [http-nio-8000-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-11-23 17:06:12.083 [http-nio-8000-exec-1] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) FROM transactions]
+2026-11-23 17:06:12.125 [http-nio-8000-exec-1] DEBUG c.m.api.repository.TransaccionRepository - Ejecutando consulta paginada: page=0, size=2, offset=0
+2026-11-23 17:06:12.126 [http-nio-8000-exec-1] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 17:06:12.127 [http-nio-8000-exec-1] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions ORDER BY fecha DESC, id DESC LIMIT ? OFFSET ?]
+2026-11-23 17:06:12.151 [http-nio-8000-exec-1] INFO  c.m.api.service.TransaccionService - Consulta de transacciones: page=0, size=2, devueltas=2, total=21
+2026-11-23 17:06:12.345 [http-nio-8000-exec-2] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=-1 size=10
+2026-11-23 17:06:12.352 [http-nio-8000-exec-2] ERROR c.m.api.controller.TransaccionController - Fallo en GET /api/transacciones page=-1 size=10: El parametro 'page' debe ser mayor o igual a 0
+2026-11-23 17:06:12.357 [http-nio-8000-exec-2] WARN  c.m.api.exception.GlobalExceptionHandler - 400 Bad Request en GET /api/transacciones: El parametro 'page' debe ser mayor o igual a 0
+2026-11-23 17:06:12.399 [http-nio-8000-exec-3] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones/999999
+2026-11-23 17:06:12.402 [http-nio-8000-exec-3] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 17:06:12.402 [http-nio-8000-exec-3] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions WHERE id = ?]
+2026-11-23 17:06:12.404 [http-nio-8000-exec-3] WARN  c.m.api.service.TransaccionService - Transaccion id=999999 no encontrada
+2026-11-23 17:06:12.406 [http-nio-8000-exec-3] ERROR c.m.api.controller.TransaccionController - Fallo en GET /api/transacciones/999999: No existe la transaccion con id 999999
+2026-11-23 17:06:12.408 [http-nio-8000-exec-3] WARN  c.m.api.exception.GlobalExceptionHandler - 404 Not Found en GET /api/transacciones/999999: No existe la transaccion con id 999999
+2026-11-23 17:14:20.025 [main] INFO  com.microserviviort.api.ApiApplication - Starting ApiApplication v0.0.1-SNAPSHOT using Java 21.0.12.1 with PID 6668 (C:\Users\ne\Downloads\api\api\target\api-0.0.1-SNAPSHOT.jar started by ne in C:\Users\ne\Downloads\api\api)
+2026-11-23 17:14:20.030 [main] DEBUG com.microserviviort.api.ApiApplication - Running with Spring Boot v4.2.0, Spring v7.1.0
+2026-11-23 17:14:20.031 [main] INFO  com.microserviviort.api.ApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-23 17:14:22.045 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
+2026-11-23 17:14:22.091 [main] INFO  o.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
+2026-11-23 17:14:22.095 [main] INFO  o.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-11-23 17:14:22.095 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-11-23 17:14:22.158 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2023 ms
+2026-11-23 17:14:22.374 [main] INFO  c.m.api.repository.TransaccionRepository - TransaccionRepository inicializado sobre la tabla 'transactions'
+2026-11-23 17:14:22.508 [main] INFO  o.s.b.w.a.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-11-23 17:14:22.516 [main] INFO  c.microserviviort.api.config.CorsConfig - Configurando CORS para /api/** con origenes: *
+2026-11-23 17:14:22.978 [main] INFO  o.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
+2026-11-23 17:14:23.027 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8000 (http) with context path '/'
+2026-11-23 17:14:23.082 [main] INFO  com.microserviviort.api.ApiApplication - Started ApiApplication in 4.18 seconds (process running for 5.104)
+2026-11-23 17:14:33.395 [main] INFO  com.microserviviort.api.ApiApplication - Starting ApiApplication v0.0.1-SNAPSHOT using Java 21.0.12.1 with PID 5720 (C:\Users\ne\Downloads\api\api\target\api-0.0.1-SNAPSHOT.jar started by ne in C:\Users\ne\Downloads\api\api)
+2026-11-23 17:14:33.400 [main] DEBUG com.microserviviort.api.ApiApplication - Running with Spring Boot v4.2.0, Spring v7.1.0
+2026-11-23 17:14:33.403 [main] INFO  com.microserviviort.api.ApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-23 17:14:35.398 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8001 (http)
+2026-11-23 17:14:35.421 [main] INFO  o.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
+2026-11-23 17:14:35.425 [main] INFO  o.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-11-23 17:14:35.426 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-11-23 17:14:35.504 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1994 ms
+2026-11-23 17:14:35.741 [main] INFO  c.m.api.repository.TransaccionRepository - TransaccionRepository inicializado sobre la tabla 'transactions'
+2026-11-23 17:14:35.878 [main] INFO  o.s.b.w.a.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-11-23 17:14:35.884 [main] INFO  c.microserviviort.api.config.CorsConfig - Configurando CORS para /api/** con origenes: *
+2026-11-23 17:14:36.341 [main] INFO  o.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8001"]
+2026-11-23 17:14:36.392 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8001 (http) with context path '/'
+2026-11-23 17:14:36.447 [main] INFO  com.microserviviort.api.ApiApplication - Started ApiApplication in 4.186 seconds (process running for 5.128)
+2026-11-23 17:14:42.441 [http-nio-8000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-23 17:14:42.441 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-11-23 17:14:42.444 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-11-23 17:14:42.510 [http-nio-8000-exec-1] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=0 size=3
+2026-11-23 17:14:42.515 [http-nio-8000-exec-1] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) FROM transactions]
+2026-11-23 17:14:42.522 [http-nio-8000-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-11-23 17:14:42.822 [http-nio-8000-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@93b4945
+2026-11-23 17:14:42.825 [http-nio-8000-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-11-23 17:14:42.870 [http-nio-8000-exec-1] DEBUG c.m.api.repository.TransaccionRepository - Ejecutando consulta paginada: page=0, size=3, offset=0
+2026-11-23 17:14:42.872 [http-nio-8000-exec-1] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 17:14:42.873 [http-nio-8000-exec-1] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions ORDER BY fecha DESC, id DESC LIMIT ? OFFSET ?]
+2026-11-23 17:14:42.895 [http-nio-8000-exec-1] INFO  c.m.api.service.TransaccionService - Consulta de transacciones: page=0, size=3, devueltas=3, total=21
+2026-11-23 17:14:43.083 [http-nio-8000-exec-2] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=2 size=10
+2026-11-23 17:14:43.083 [http-nio-8000-exec-2] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) FROM transactions]
+2026-11-23 17:14:43.084 [http-nio-8000-exec-2] DEBUG c.m.api.repository.TransaccionRepository - Ejecutando consulta paginada: page=2, size=10, offset=20
+2026-11-23 17:14:43.085 [http-nio-8000-exec-2] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 17:14:43.086 [http-nio-8000-exec-2] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions ORDER BY fecha DESC, id DESC LIMIT ? OFFSET ?]
+2026-11-23 17:14:43.088 [http-nio-8000-exec-2] INFO  c.m.api.service.TransaccionService - Consulta de transacciones: page=2, size=10, devueltas=1, total=21
+2026-11-23 17:14:43.132 [http-nio-8000-exec-3] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones/1
+2026-11-23 17:14:43.134 [http-nio-8000-exec-3] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 17:14:43.134 [http-nio-8000-exec-3] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions WHERE id = ?]
+2026-11-23 17:14:43.184 [http-nio-8000-exec-4] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=-1 size=10
+2026-11-23 17:14:43.185 [http-nio-8000-exec-4] ERROR c.m.api.controller.TransaccionController - Fallo en GET /api/transacciones page=-1 size=10: El parametro 'page' debe ser mayor o igual a 0
+2026-11-23 17:14:43.191 [http-nio-8000-exec-4] WARN  c.m.api.exception.GlobalExceptionHandler - 400 Bad Request en GET /api/transacciones: El parametro 'page' debe ser mayor o igual a 0
+2026-11-23 17:14:43.327 [http-nio-8000-exec-5] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=0 size=500
+2026-11-23 17:14:43.327 [http-nio-8000-exec-5] ERROR c.m.api.controller.TransaccionController - Fallo en GET /api/transacciones page=0 size=500: El parametro 'size' debe estar entre 1 y 100
+2026-11-23 17:14:43.328 [http-nio-8000-exec-5] WARN  c.m.api.exception.GlobalExceptionHandler - 400 Bad Request en GET /api/transacciones: El parametro 'size' debe estar entre 1 y 100
+2026-11-23 17:14:43.338 [http-nio-8000-exec-6] WARN  c.m.api.exception.GlobalExceptionHandler - 400 Bad Request en GET /api/transacciones/abc: El parametro 'id' tiene un valor invalido: abc
+2026-11-23 17:14:43.347 [http-nio-8000-exec-7] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones/0
+2026-11-23 17:14:43.347 [http-nio-8000-exec-7] ERROR c.m.api.controller.TransaccionController - Fallo en GET /api/transacciones/0: El id debe ser un entero positivo
+2026-11-23 17:14:43.347 [http-nio-8000-exec-7] WARN  c.m.api.exception.GlobalExceptionHandler - 400 Bad Request en GET /api/transacciones/0: El id debe ser un entero positivo
+2026-11-23 17:14:43.354 [http-nio-8000-exec-8] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones/999999
+2026-11-23 17:14:43.355 [http-nio-8000-exec-8] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 17:14:43.355 [http-nio-8000-exec-8] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions WHERE id = ?]
+2026-11-23 17:14:43.357 [http-nio-8000-exec-8] WARN  c.m.api.service.TransaccionService - Transaccion id=999999 no encontrada
+2026-11-23 17:14:43.359 [http-nio-8000-exec-8] ERROR c.m.api.controller.TransaccionController - Fallo en GET /api/transacciones/999999: No existe la transaccion con id 999999
+2026-11-23 17:14:43.360 [http-nio-8000-exec-8] WARN  c.m.api.exception.GlobalExceptionHandler - 404 Not Found en GET /api/transacciones/999999: No existe la transaccion con id 999999
+2026-11-23 17:14:43.367 [http-nio-8000-exec-9] INFO  c.m.api.controller.TransaccionController - DELETE /api/transacciones/999999
+2026-11-23 17:14:43.369 [http-nio-8000-exec-9] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+2026-11-23 17:14:43.369 [http-nio-8000-exec-9] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [DELETE FROM transactions WHERE id = ?]
+2026-11-23 17:14:43.373 [http-nio-8000-exec-9] DEBUG c.m.api.repository.TransaccionRepository - DELETE id=999999 -> filas afectadas=0
+2026-11-23 17:14:43.374 [http-nio-8000-exec-9] WARN  c.m.api.service.TransaccionService - Intento de eliminar transaccion inexistente id=999999
+2026-11-23 17:14:43.374 [http-nio-8000-exec-9] ERROR c.m.api.controller.TransaccionController - Fallo en DELETE /api/transacciones/999999: No existe la transaccion con id 999999
+2026-11-23 17:14:43.375 [http-nio-8000-exec-9] WARN  c.m.api.exception.GlobalExceptionHandler - 404 Not Found en DELETE /api/transacciones/999999: No existe la transaccion con id 999999
+2026-11-23 17:14:43.382 [http-nio-8000-exec-10] INFO  c.m.api.controller.TransaccionController - DELETE /api/transacciones/0
+2026-11-23 17:14:43.382 [http-nio-8000-exec-10] ERROR c.m.api.controller.TransaccionController - Fallo en DELETE /api/transacciones/0: El id debe ser un entero positivo
+2026-11-23 17:14:43.382 [http-nio-8000-exec-10] WARN  c.m.api.exception.GlobalExceptionHandler - 400 Bad Request en DELETE /api/transacciones/0: El id debe ser un entero positivo
+2026-11-23 17:14:43.392 [http-nio-8000-exec-1] WARN  c.m.api.exception.GlobalExceptionHandler - 405 Metodo no permitido: PATCH /api/transacciones/1
+2026-11-23 17:14:43.507 [http-nio-8001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-23 17:14:43.508 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-11-23 17:14:43.509 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-11-23 17:14:43.570 [http-nio-8001-exec-1] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=-1 size=10
+2026-11-23 17:14:43.571 [http-nio-8001-exec-1] ERROR c.m.api.controller.TransaccionController - Fallo en GET /api/transacciones page=-1 size=10: El parametro 'page' debe ser mayor o igual a 0
+2026-11-23 17:14:43.576 [http-nio-8001-exec-1] WARN  c.m.api.exception.GlobalExceptionHandler - 400 Bad Request en GET /api/transacciones: El parametro 'page' debe ser mayor o igual a 0
+2026-11-23 17:14:43.692 [http-nio-8001-exec-2] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=0 size=500
+2026-11-23 17:14:43.693 [http-nio-8001-exec-2] ERROR c.m.api.controller.TransaccionController - Fallo en GET /api/transacciones page=0 size=500: El parametro 'size' debe estar entre 1 y 100
+2026-11-23 17:14:43.694 [http-nio-8001-exec-2] WARN  c.m.api.exception.GlobalExceptionHandler - 400 Bad Request en GET /api/transacciones: El parametro 'size' debe estar entre 1 y 100
+2026-11-23 17:14:43.707 [http-nio-8001-exec-4] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones/0
+2026-11-23 17:14:43.707 [http-nio-8001-exec-4] ERROR c.m.api.controller.TransaccionController - Fallo en GET /api/transacciones/0: El id debe ser un entero positivo
+2026-11-23 17:14:43.708 [http-nio-8001-exec-4] WARN  c.m.api.exception.GlobalExceptionHandler - 400 Bad Request en GET /api/transacciones/0: El id debe ser un entero positivo
+2026-11-23 17:14:43.719 [http-nio-8001-exec-3] INFO  c.m.api.controller.TransaccionController - DELETE /api/transacciones/0
+2026-11-23 17:14:43.720 [http-nio-8001-exec-3] ERROR c.m.api.controller.TransaccionController - Fallo en DELETE /api/transacciones/0: El id debe ser un entero positivo
+2026-11-23 17:14:43.721 [http-nio-8001-exec-3] WARN  c.m.api.exception.GlobalExceptionHandler - 400 Bad Request en DELETE /api/transacciones/0: El id debe ser un entero positivo
+2026-11-23 17:14:43.730 [http-nio-8001-exec-5] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=0 size=3
+2026-11-23 17:14:43.736 [http-nio-8001-exec-5] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) FROM transactions]
+2026-11-23 17:14:43.740 [http-nio-8001-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-11-23 17:14:44.909 [http-nio-8001-exec-5] ERROR c.m.api.repository.TransaccionRepository - Error contando transacciones: Failed to obtain JDBC Connection
+org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:407)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:491)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:501)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:533)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:539)
+	at com.microserviviort.api.repository.TransaccionRepository.count(TransaccionRepository.java:82)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:135)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:738)
+	at com.microserviviort.api.repository.TransaccionRepository$$SpringCGLIB$$0.count(<generated>)
+	at com.microserviviort.api.service.TransaccionService.consultar(TransaccionService.java:44)
+	at com.microserviviort.api.controller.TransaccionController.consultar(TransaccionController.java:43)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:938)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:857)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1001)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:872)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:411)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2202)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:947)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:481)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	... 60 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	... 73 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 76 common frames omitted
+2026-11-23 17:14:44.921 [http-nio-8001-exec-5] ERROR c.m.api.controller.TransaccionController - Fallo en GET /api/transacciones page=0 size=3: Error al contar las transacciones
+2026-11-23 17:14:44.923 [http-nio-8001-exec-5] ERROR c.m.api.exception.GlobalExceptionHandler - 500 Error de base de datos en GET /api/transacciones: Error al contar las transacciones
+com.microserviviort.api.exception.DataAccessLayerException: Error al contar las transacciones
+	at com.microserviviort.api.repository.TransaccionRepository.count(TransaccionRepository.java:86)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:135)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:738)
+	at com.microserviviort.api.repository.TransaccionRepository$$SpringCGLIB$$0.count(<generated>)
+	at com.microserviviort.api.service.TransaccionService.consultar(TransaccionService.java:44)
+	at com.microserviviort.api.controller.TransaccionController.consultar(TransaccionController.java:43)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:938)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:857)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1001)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:872)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:411)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2202)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:947)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:481)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:407)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:491)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:501)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:533)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:539)
+	at com.microserviviort.api.repository.TransaccionRepository.count(TransaccionRepository.java:82)
+	... 54 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	... 60 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	... 73 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 76 common frames omitted
+2026-11-23 17:15:30.233 [http-nio-8000-exec-3] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=0 size=10
+2026-11-23 17:15:30.234 [http-nio-8000-exec-3] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) FROM transactions]
+2026-11-23 17:15:30.237 [http-nio-8000-exec-3] DEBUG c.m.api.repository.TransaccionRepository - Ejecutando consulta paginada: page=0, size=10, offset=0
+2026-11-23 17:15:30.237 [http-nio-8000-exec-3] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 17:15:30.237 [http-nio-8000-exec-3] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions ORDER BY fecha DESC, id DESC LIMIT ? OFFSET ?]
+2026-11-23 17:15:30.245 [http-nio-8000-exec-3] INFO  c.m.api.service.TransaccionService - Consulta de transacciones: page=0, size=10, devueltas=10, total=21
+2026-11-23 17:15:50.212 [http-nio-8000-exec-4] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=1 size=10
+2026-11-23 17:15:50.212 [http-nio-8000-exec-4] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) FROM transactions]
+2026-11-23 17:15:50.219 [http-nio-8000-exec-4] DEBUG c.m.api.repository.TransaccionRepository - Ejecutando consulta paginada: page=1, size=10, offset=10
+2026-11-23 17:15:50.219 [http-nio-8000-exec-4] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 17:15:50.219 [http-nio-8000-exec-4] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions ORDER BY fecha DESC, id DESC LIMIT ? OFFSET ?]
+2026-11-23 17:15:50.226 [http-nio-8000-exec-4] INFO  c.m.api.service.TransaccionService - Consulta de transacciones: page=1, size=10, devueltas=10, total=21
+2026-11-23 17:15:51.834 [http-nio-8000-exec-5] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=2 size=10
+2026-11-23 17:15:51.834 [http-nio-8000-exec-5] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) FROM transactions]
+2026-11-23 17:15:51.836 [http-nio-8000-exec-5] DEBUG c.m.api.repository.TransaccionRepository - Ejecutando consulta paginada: page=2, size=10, offset=20
+2026-11-23 17:15:51.836 [http-nio-8000-exec-5] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 17:15:51.836 [http-nio-8000-exec-5] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions ORDER BY fecha DESC, id DESC LIMIT ? OFFSET ?]
+2026-11-23 17:15:51.840 [http-nio-8000-exec-5] INFO  c.m.api.service.TransaccionService - Consulta de transacciones: page=2, size=10, devueltas=1, total=21
+2026-11-23 17:15:53.021 [http-nio-8000-exec-6] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=1 size=10
+2026-11-23 17:15:53.024 [http-nio-8000-exec-6] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) FROM transactions]
+2026-11-23 17:15:53.026 [http-nio-8000-exec-6] DEBUG c.m.api.repository.TransaccionRepository - Ejecutando consulta paginada: page=1, size=10, offset=10
+2026-11-23 17:15:53.026 [http-nio-8000-exec-6] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 17:15:53.026 [http-nio-8000-exec-6] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions ORDER BY fecha DESC, id DESC LIMIT ? OFFSET ?]
+2026-11-23 17:15:53.033 [http-nio-8000-exec-6] INFO  c.m.api.service.TransaccionService - Consulta de transacciones: page=1, size=10, devueltas=10, total=21
+2026-11-23 17:15:54.220 [http-nio-8000-exec-7] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=0 size=10
+2026-11-23 17:15:54.222 [http-nio-8000-exec-7] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) FROM transactions]
+2026-11-23 17:15:54.228 [http-nio-8000-exec-7] DEBUG c.m.api.repository.TransaccionRepository - Ejecutando consulta paginada: page=0, size=10, offset=0
+2026-11-23 17:15:54.228 [http-nio-8000-exec-7] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 17:15:54.228 [http-nio-8000-exec-7] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions ORDER BY fecha DESC, id DESC LIMIT ? OFFSET ?]
+2026-11-23 17:15:54.232 [http-nio-8000-exec-7] INFO  c.m.api.service.TransaccionService - Consulta de transacciones: page=0, size=10, devueltas=10, total=21

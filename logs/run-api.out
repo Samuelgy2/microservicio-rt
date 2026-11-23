@@ -1,0 +1,126 @@
+﻿Eliminando lock‑files de Maven...
+
+==== Compilando proyecto (offline) ====
+[INFO] Scanning for projects...
+[INFO] Loaded 24601 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] 
+[INFO] ----------------------< com.microserviviort:api >-----------------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ api ---
+[INFO] Deleting C:\Users\ne\Downloads\api\api\target
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ api ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 4 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.16.0:compile (default-compile) @ api ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 12 source files with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ api ---
+[INFO] skip non existing resourceDirectory C:\Users\ne\Downloads\api\api\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.16.0:testCompile (default-testCompile) @ api ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.6.1:test (default-test) @ api ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.5.1:jar (default-jar) @ api ---
+[INFO] Building jar: C:\Users\ne\Downloads\api\api\target\api-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:4.2.0:repackage (repackage) @ api ---
+[INFO] Replacing main artifact C:\Users\ne\Downloads\api\api\target\api-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\ne\Downloads\api\api\target\api-0.0.1-SNAPSHOT.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.739 s
+[INFO] Finished at: 2026-11-23T16:51:32-05:00
+[INFO] ------------------------------------------------------------------------
+
+==== Iniciando Spring Boot (puerto 8000) ====
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.2.0)
+
+2026-11-23 16:51:34.646 [main] INFO  com.microserviviort.api.ApiApplication - Starting ApiApplication v0.0.1-SNAPSHOT using Java 21.0.12.1 with PID 23880 (C:\Users\ne\Downloads\api\api\target\api-0.0.1-SNAPSHOT.jar started by ne in C:\Users\ne\Downloads\api\api)
+2026-11-23 16:51:34.654 [main] DEBUG com.microserviviort.api.ApiApplication - Running with Spring Boot v4.2.0, Spring v7.1.0
+2026-11-23 16:51:34.655 [main] INFO  com.microserviviort.api.ApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-23 16:51:36.656 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
+2026-11-23 16:51:36.685 [main] INFO  o.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
+2026-11-23 16:51:36.688 [main] INFO  o.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-11-23 16:51:36.688 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-11-23 16:51:36.786 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2028 ms
+2026-11-23 16:51:37.019 [main] INFO  c.m.api.repository.TransaccionRepository - TransaccionRepository inicializado sobre la tabla 'transactions'
+2026-11-23 16:51:37.185 [main] INFO  o.s.b.w.a.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-11-23 16:51:37.192 [main] INFO  c.microserviviort.api.config.CorsConfig - Configurando CORS para /api/** con origenes: *
+2026-11-23 16:51:37.655 [main] INFO  o.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
+2026-11-23 16:51:37.711 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8000 (http) with context path '/'
+2026-11-23 16:51:37.770 [main] INFO  com.microserviviort.api.ApiApplication - Started ApiApplication in 4.222 seconds (process running for 5.15)
+2026-11-23 16:51:38.258 [http-nio-8000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-23 16:51:38.258 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-11-23 16:51:38.261 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-11-23 16:51:41.895 [http-nio-8000-exec-3] WARN  c.m.api.exception.GlobalExceptionHandler - 404 Ruta no encontrada: GET /favicon.ico
+2026-11-23 16:51:41.913 [http-nio-8000-exec-2] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=0 size=10
+2026-11-23 16:51:41.923 [http-nio-8000-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-11-23 16:51:42.283 [http-nio-8000-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e375e0d
+2026-11-23 16:51:42.291 [http-nio-8000-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-11-23 16:51:42.306 [http-nio-8000-exec-2] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) FROM transactions]
+2026-11-23 16:51:42.363 [http-nio-8000-exec-2] DEBUG c.m.api.repository.TransaccionRepository - Ejecutando consulta paginada: page=0, size=10, offset=0
+2026-11-23 16:51:42.363 [http-nio-8000-exec-2] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 16:51:42.369 [http-nio-8000-exec-2] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions ORDER BY fecha DESC, id DESC LIMIT ? OFFSET ?]
+2026-11-23 16:51:42.396 [http-nio-8000-exec-2] INFO  c.m.api.service.TransaccionService - Consulta de transacciones: page=0, size=10, devueltas=10, total=21
+2026-11-23 16:51:49.162 [http-nio-8000-exec-10] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=1 size=10
+2026-11-23 16:51:49.162 [http-nio-8000-exec-10] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) FROM transactions]
+2026-11-23 16:51:49.162 [http-nio-8000-exec-10] DEBUG c.m.api.repository.TransaccionRepository - Ejecutando consulta paginada: page=1, size=10, offset=10
+2026-11-23 16:51:49.162 [http-nio-8000-exec-10] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 16:51:49.162 [http-nio-8000-exec-10] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions ORDER BY fecha DESC, id DESC LIMIT ? OFFSET ?]
+2026-11-23 16:51:49.171 [http-nio-8000-exec-10] INFO  c.m.api.service.TransaccionService - Consulta de transacciones: page=1, size=10, devueltas=10, total=21
+2026-11-23 16:51:55.353 [http-nio-8000-exec-7] INFO  c.m.api.controller.TransaccionController - DELETE /api/transacciones/999999
+2026-11-23 16:51:55.354 [http-nio-8000-exec-7] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+2026-11-23 16:51:55.354 [http-nio-8000-exec-7] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [DELETE FROM transactions WHERE id = ?]
+2026-11-23 16:51:55.362 [http-nio-8000-exec-7] DEBUG c.m.api.repository.TransaccionRepository - DELETE id=999999 -> filas afectadas=0
+2026-11-23 16:51:55.362 [http-nio-8000-exec-7] WARN  c.m.api.service.TransaccionService - Intento de eliminar transaccion inexistente id=999999
+2026-11-23 16:51:55.370 [http-nio-8000-exec-7] ERROR c.m.api.controller.TransaccionController - Fallo en DELETE /api/transacciones/999999: No existe la transaccion con id 999999
+2026-11-23 16:51:55.372 [http-nio-8000-exec-7] WARN  c.m.api.exception.GlobalExceptionHandler - 404 Not Found en DELETE /api/transacciones/999999: No existe la transaccion con id 999999
+2026-11-23 16:53:25.264 [http-nio-8000-exec-10] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=0 size=10
+2026-11-23 16:53:25.267 [http-nio-8000-exec-10] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) FROM transactions]
+2026-11-23 16:53:25.269 [http-nio-8000-exec-10] DEBUG c.m.api.repository.TransaccionRepository - Ejecutando consulta paginada: page=0, size=10, offset=0
+2026-11-23 16:53:25.269 [http-nio-8000-exec-10] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 16:53:25.269 [http-nio-8000-exec-10] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions ORDER BY fecha DESC, id DESC LIMIT ? OFFSET ?]
+2026-11-23 16:53:25.274 [http-nio-8000-exec-10] INFO  c.m.api.service.TransaccionService - Consulta de transacciones: page=0, size=10, devueltas=10, total=21
+2026-11-23 16:53:27.833 [http-nio-8000-exec-8] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=0 size=10
+2026-11-23 16:53:27.836 [http-nio-8000-exec-8] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) FROM transactions]
+2026-11-23 16:53:27.838 [http-nio-8000-exec-8] DEBUG c.m.api.repository.TransaccionRepository - Ejecutando consulta paginada: page=0, size=10, offset=0
+2026-11-23 16:53:27.838 [http-nio-8000-exec-8] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 16:53:27.840 [http-nio-8000-exec-8] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions ORDER BY fecha DESC, id DESC LIMIT ? OFFSET ?]
+2026-11-23 16:53:27.844 [http-nio-8000-exec-8] INFO  c.m.api.service.TransaccionService - Consulta de transacciones: page=0, size=10, devueltas=10, total=21
+2026-11-23 16:53:28.463 [http-nio-8000-exec-6] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=0 size=10
+2026-11-23 16:53:28.467 [http-nio-8000-exec-6] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) FROM transactions]
+2026-11-23 16:53:28.469 [http-nio-8000-exec-6] DEBUG c.m.api.repository.TransaccionRepository - Ejecutando consulta paginada: page=0, size=10, offset=0
+2026-11-23 16:53:28.469 [http-nio-8000-exec-6] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 16:53:28.469 [http-nio-8000-exec-6] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions ORDER BY fecha DESC, id DESC LIMIT ? OFFSET ?]
+2026-11-23 16:53:28.476 [http-nio-8000-exec-6] INFO  c.m.api.service.TransaccionService - Consulta de transacciones: page=0, size=10, devueltas=10, total=21
+2026-11-23 16:53:28.656 [http-nio-8000-exec-5] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=0 size=10
+2026-11-23 16:53:28.658 [http-nio-8000-exec-5] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) FROM transactions]
+2026-11-23 16:53:28.661 [http-nio-8000-exec-5] DEBUG c.m.api.repository.TransaccionRepository - Ejecutando consulta paginada: page=0, size=10, offset=0
+2026-11-23 16:53:28.661 [http-nio-8000-exec-5] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 16:53:28.663 [http-nio-8000-exec-5] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions ORDER BY fecha DESC, id DESC LIMIT ? OFFSET ?]
+2026-11-23 16:53:28.669 [http-nio-8000-exec-5] INFO  c.m.api.service.TransaccionService - Consulta de transacciones: page=0, size=10, devueltas=10, total=21
+2026-11-23 16:53:28.849 [http-nio-8000-exec-3] INFO  c.m.api.controller.TransaccionController - GET /api/transacciones page=0 size=10
+2026-11-23 16:53:28.851 [http-nio-8000-exec-3] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing SQL query [SELECT COUNT(*) FROM transactions]
+2026-11-23 16:53:28.854 [http-nio-8000-exec-3] DEBUG c.m.api.repository.TransaccionRepository - Ejecutando consulta paginada: page=0, size=10, offset=0
+2026-11-23 16:53:28.854 [http-nio-8000-exec-3] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL query
+2026-11-23 16:53:28.854 [http-nio-8000-exec-3] DEBUG o.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [SELECT id, tipo, monto, fecha, descripcion, created_at, metodo_pago, categoria_id, referencia, created_by, id_socio, estado FROM transactions ORDER BY fecha DESC, id DESC LIMIT ? OFFSET ?]
+2026-11-23 16:53:28.861 [http-nio-8000-exec-3] INFO  c.m.api.service.TransaccionService - Consulta de transacciones: page=0, size=10, devueltas=10, total=21
