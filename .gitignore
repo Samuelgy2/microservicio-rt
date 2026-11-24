@@ -1,0 +1,28 @@
+# Claude Code (local settings; may hold secrets)
+.claude/settings.local.json
+
+# Secrets
+.env
+.env.*
+
+# Build output
+target/
+
+# Local Maven repositories
+custom_m2/
+local-m2/
+local-repo/
+localrepo/
+
+# Logs
+logs/
+*.log
+*.log.gz
+
+# IDE
+*.iws
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
